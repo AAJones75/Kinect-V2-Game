@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/Test_Scenes/Controller_And_Kinect.unity
+  isLoaded: 1
+  isActive: 1

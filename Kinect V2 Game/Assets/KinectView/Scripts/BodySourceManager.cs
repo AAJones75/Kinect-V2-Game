@@ -7,12 +7,15 @@ public class BodySourceManager : MonoBehaviour
     private KinectSensor _Sensor;
     private BodyFrameReader _Reader;
     private Body[] _Data = null;
+    private ulong _trackingId = 0;
+
+    public SymbolOneDetector gestureDetector;
     
+
     public Body[] GetData()
     {
         return _Data;
     }
-    
 
     void Start () 
     {
@@ -40,11 +43,32 @@ public class BodySourceManager : MonoBehaviour
                 {
                     _Data = new Body[_Sensor.BodyFrameSource.BodyCount];
                 }
-                
+
+                _trackingId = 0;
                 frame.GetAndRefreshBodyData(_Data);
                 
                 frame.Dispose();
                 frame = null;
+
+                foreach(var body in _Data)
+                {
+                    //Look for trackable bodies
+                    if(body != null && body.IsTracked)
+                    {
+                        _trackingId = body.TrackingId;
+
+                        //The gesture detector that it can turn on its reader
+                        //and start getting frames since there is a body that
+                        //is being tracked
+                        if(gestureDetector != null)
+                        {
+                            gestureDetector.SetTrackingId(_trackingId);
+                        }
+
+                        //We break since we care about the first available body
+                        break;
+                    }
+                }
             }
         }    
     }
