@@ -4,4 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Test_Scenes/Scenes/MainMenu.unity
+  - enabled: 1
+    path: Assets/Test_Scenes/Scenes/AlphaScene.unity
+  - enabled: 1
+    path: Assets/Test_Scenes/Scenes/Credits.unity
+  - enabled: 1
+    path: Assets/Test_Scenes/Scenes/Options.unity
+  - enabled: 1
+    path: Assets/Test_Scenes/Scenes/AlphaScene2.unity
+  - enabled: 1
+    path: Assets/Test_Scenes/Scenes/AlphaScene3.unity
+  - enabled: 1
+    path: Assets/Test_Scenes/Scenes/AlphaScene4.unity
+  - enabled: 1
+    path: Assets/Test_Scenes/Scenes/AlphaScene5.unity

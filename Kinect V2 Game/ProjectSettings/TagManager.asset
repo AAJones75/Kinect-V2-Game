@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - ShootItem
+  - Bullet
+  - Breakable
+  - WallClimbingItem
+  - DashItem
+  - Grippable
+  - Pressable Button
+  - ButtonCanvas
+  - Level
+  - Game Character
   layers:
   - Default
   - TransparentFX

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Test_Scenes/Controller_And_Kinect.unity
+- path: Assets/Test_Scenes/Scenes/AlphaScene.unity
   isLoaded: 1
   isActive: 1
